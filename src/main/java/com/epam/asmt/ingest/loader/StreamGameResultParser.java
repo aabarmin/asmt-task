@@ -15,7 +15,11 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class StreamGameResultParser {
-  private JsonFactory factory = new JsonFactory();
+  private final JsonFactory factory;
+
+  public StreamGameResultParser(JsonFactory factory) {
+    this.factory = factory;
+  }
 
   public void parse(InputStream stream, Consumer<GameResult> consumer) {
     try(final JsonParser parser = factory.createParser(stream)) {
