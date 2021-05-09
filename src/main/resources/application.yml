@@ -1,0 +1,36 @@
+# App-specific configuration
+app:
+  ingest:
+    sources:
+      - http://ec2-54-89-224-248.compute-1.amazonaws.com/soccer/2000
+      - http://ec2-54-89-224-248.compute-1.amazonaws.com/soccer/2001
+    preload:
+      initial-delay: 1000
+      refresh-delay: 10000
+  storage:
+    type: db
+
+# Actuator configuration
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: health,metrics
+  endpoint:
+    health:
+      enabled: true
+    metrics:
+      enabled: true
+
+# DB configuration (if enabled)
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/asmt
+    username: asmt
+    password: asmt
+  jpa:
+    generate-ddl: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

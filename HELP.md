@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.epam.asmt.ingest-app' is invalid and this project uses 'com.epam.asmt.ingestapp' instead.
+* The original package name 'com.epam.asmt.ingest-app' is invalid and this project uses 'com.epam.asmt.ingest' instead.
 
 # Getting Started
 

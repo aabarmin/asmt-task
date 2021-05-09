@@ -1,4 +1,4 @@
-package com.epam.asmt.ingestapp;
+package com.epam.asmt.ingest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
