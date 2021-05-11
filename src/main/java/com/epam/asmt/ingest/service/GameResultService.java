@@ -5,6 +5,9 @@ import com.epam.asmt.ingest.service.cache.EvictAggregationResult;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 
+/**
+ * A service to deal with game results.
+ */
 @Service
 public class GameResultService {
   private final GameResultRepository repository;

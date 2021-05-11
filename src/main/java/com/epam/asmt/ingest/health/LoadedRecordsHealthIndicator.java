@@ -5,6 +5,9 @@ import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.stereotype.Component;
 
+/**
+ * Health's indicator fo Actuator.
+ */
 @Component
 public class LoadedRecordsHealthIndicator implements HealthIndicator {
   private final RecordLoadStatusHolder loadStatusHolder;

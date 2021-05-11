@@ -8,7 +8,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-public interface GameResultJPARepository extends CrudRepository<GameResultEntity, Long> {
+/**
+ * JPA repository for the {@link GameResultEntity}.
+ */
+public interface GameResultJpaRepository extends CrudRepository<GameResultEntity, Long> {
   @Query(
       "select gr from GameResultEntity gr " +
           "inner join GameTeamEntity home on home = gr.teamHome " +

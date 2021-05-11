@@ -6,6 +6,9 @@ import io.micrometer.core.instrument.binder.MeterBinder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Spring's configuration for Actuator metrics.
+ */
 @Configuration
 public class MetricsConfiguration {
   @Bean

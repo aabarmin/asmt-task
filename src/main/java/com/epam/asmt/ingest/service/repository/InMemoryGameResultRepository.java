@@ -7,6 +7,9 @@ import java.util.HashSet;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
+/**
+ * In-memory storage of game results. Enabled if "app.storage.type" has value "in_memory".
+ */
 @Component
 @ConditionalOnProperty(prefix = "app.storage", name = "type", havingValue = "in_memory", matchIfMissing = true)
 public class InMemoryGameResultRepository implements GameResultRepository {

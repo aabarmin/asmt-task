@@ -5,6 +5,9 @@ import com.epam.asmt.ingest.service.GameResultAggregator;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Provides aggregated results of games.
+ */
 @RestController
 public class AggregateController {
   private final GameResultAggregator aggregator;

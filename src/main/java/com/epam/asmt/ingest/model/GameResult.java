@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import lombok.Builder;
 import lombok.Value;
 
+/**
+ * Result of a particular game.
+ */
 @Value
 @Builder
 public class GameResult {

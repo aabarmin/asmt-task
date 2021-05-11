@@ -6,6 +6,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.validation.annotation.Validated;
 
+/**
+ * Application's configuration.
+ */
 @Data
 @Validated
 @ConfigurationProperties(prefix = "app")

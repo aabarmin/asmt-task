@@ -5,10 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Value;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+/**
+ * Information about game result for the aggregate.
+ */
+@Value
 public class TeamInfo {
-  private String team;
-  private long amount;
+  String team;
+  long amount;
 }

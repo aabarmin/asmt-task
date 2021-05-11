@@ -1,6 +1,6 @@
 package com.epam.asmt.ingest.config;
 
-import com.epam.asmt.ingest.service.repository.jpa.GameResultJPARepository;
+import com.epam.asmt.ingest.service.repository.jpa.GameResultJpaRepository;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -13,7 +13,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
     DataSourceAutoConfiguration.class,
     FlywayAutoConfiguration.class
 })
-@EnableJpaRepositories(basePackageClasses = GameResultJPARepository.class)
+@EnableJpaRepositories(basePackageClasses = GameResultJpaRepository.class)
 @ConditionalOnProperty(prefix = "app.storage", name = "type", havingValue = "db")
 public class DatabaseConfiguration {
 }

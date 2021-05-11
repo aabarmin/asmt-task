@@ -10,6 +10,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.validation.annotation.Validated;
 
+/**
+ * Configuration of ingest sources.
+ */
 @Data
 public class IngestSourcesConfiguration {
   @Valid

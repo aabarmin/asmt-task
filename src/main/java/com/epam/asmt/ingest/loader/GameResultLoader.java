@@ -46,7 +46,10 @@ public class GameResultLoader {
         return false;
       }
 
-      resultParser.parse(httpResponse.body(), resultService::save);
+      resultParser.parse(httpResponse.body(), resultService::save, (serviceError) -> {
+        log.error("Service responded with error code {} and message {}",
+            serviceError.getErrorCode(), serviceError.getErrorMessage());
+      });
     } catch (IOException e) {
       log.error("IOException during sending request to {}", uri, e);
       return false;

@@ -7,6 +7,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+/**
+ * Periodically pulls updates from ingest sources.
+ */
 @Slf4j
 @Component
 public class ScheduledLoader {

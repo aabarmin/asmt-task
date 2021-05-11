@@ -13,6 +13,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
+/**
+ * In-memory game results aggregator.
+ */
 @Component
 @ConditionalOnProperty(prefix = "app.storage", name = "type", havingValue = "in_memory", matchIfMissing = true)
 public class SimpleGameResultAggregator implements GameResultAggregator {

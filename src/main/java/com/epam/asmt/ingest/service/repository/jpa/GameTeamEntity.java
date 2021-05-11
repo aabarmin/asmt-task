@@ -10,6 +10,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Entity stores information about a team.
+ */
 @Data
 @Entity
 @NoArgsConstructor

@@ -9,14 +9,18 @@ import java.util.stream.StreamSupport;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
+/**
+ * Jpa backed for the {@link GameResultRepository}. Enabled only if
+ * "app.storage.type" is equals to "db".
+ */
 @Component
 @ConditionalOnProperty(prefix = "app.storage", name = "type", havingValue = "db")
 public class JpaGameResultRepository implements GameResultRepository {
-  private final GameResultJPARepository resultRepository;
-  private final GameTeamJdbcRepository teamRepository;
+  private final GameResultJpaRepository resultRepository;
+  private final GameTeamJpaRepository teamRepository;
 
-  public JpaGameResultRepository(GameResultJPARepository resultRepository,
-                                 GameTeamJdbcRepository teamRepository) {
+  public JpaGameResultRepository(GameResultJpaRepository resultRepository,
+                                 GameTeamJpaRepository teamRepository) {
     this.resultRepository = resultRepository;
     this.teamRepository = teamRepository;
   }
@@ -33,19 +37,18 @@ public class JpaGameResultRepository implements GameResultRepository {
     if (foundOptional.isPresent()) {
       return false;
     }
-    resultRepository.save(new GameResultEntity(
-        null,
-        result.getDate(),
-        findTeam(result.getHomeTeam()),
-        findTeam(result.getAwayTeam()),
-        findTeam(findWinner(result)),
-        result.getHomeScore(),
-        result.getAwayScore(),
-        findWinnerScore(result),
-        result.getTournament(),
-        result.getCity(),
-        result.getCountry()
-    ));
+    resultRepository.save(GameResultEntity.builder()
+        .gameDate(result.getDate())
+        .teamHome(findTeam(result.getHomeTeam()))
+        .teamAway(findTeam(result.getAwayTeam()))
+        .teamWinner(findTeam(findWinner(result)))
+        .scoreHome(result.getHomeScore())
+        .scoreAway(result.getAwayScore())
+        .scoreWinner(findWinnerScore(result))
+        .tournament(result.getTournament())
+        .city(result.getCity())
+        .country(result.getCountry())
+        .build());
     return true;
   }
 

@@ -4,6 +4,9 @@ import com.fasterxml.jackson.core.JsonFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Spring's configuration for Json parsing.
+ */
 @Configuration
 public class JsonConfiguration {
   @Bean

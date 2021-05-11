@@ -4,6 +4,9 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import lombok.Data;
 
+/**
+ * Preload configuration parameters.
+ */
 @Data
 public class PreloadConfiguration {
   @Min(1_000)
