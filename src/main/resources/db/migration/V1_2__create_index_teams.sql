@@ -1,0 +1,2 @@
+create index GAME_TEAMS_TEAM_NAME_INDEX
+    on GAME_TEAMS (TEAM_NAME);
