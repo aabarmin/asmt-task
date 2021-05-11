@@ -21,5 +21,10 @@ jobs:
       - name: Build with Maven
         run: mvn -B clean package --file pom.xml
 
+      - name: Configure git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
       - name: Release with Maven
         run: mvn -B release:prepare release:perform
