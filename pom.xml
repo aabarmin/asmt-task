@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.epam.asmt</groupId>
 	<artifactId>ingest-app</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>Ingest App Skeleton</name>
 	<description>App Skeleton for the ASMT session</description>
 	<properties>
