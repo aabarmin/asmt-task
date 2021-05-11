@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.epam.asmt</groupId>
 	<artifactId>ingest-app</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<name>Ingest App Skeleton</name>
 	<description>App Skeleton for the ASMT session</description>
 	<properties>
@@ -18,7 +18,7 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/aabarmin/asmt-task.git</developerConnection>
-	  <tag>ingest-app-0.0.3</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<dependencies>
