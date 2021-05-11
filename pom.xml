@@ -16,6 +16,11 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+
+	<scm>
+		<developerConnection>scm:git:https://github.com/aabarmin/asmt-task.git</developerConnection>
+	</scm>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -89,6 +94,14 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub</name>
+			<url>https://maven.pkg.github.com/aabarmin/asmt-task</url>
+		</repository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
