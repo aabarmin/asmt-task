@@ -36,3 +36,5 @@ jobs:
 
       - name: Release with Maven
         run: mvn -B release:prepare release:perform
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
